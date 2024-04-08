@@ -3,11 +3,6 @@ export default {
   name: 'AppHeader',
   props: {
     navLinks: Array
-  },
-  data() {
-    return {
-
-    }
   }
 }
 </script>

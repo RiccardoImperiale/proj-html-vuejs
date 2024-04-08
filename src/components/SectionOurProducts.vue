@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'SectionProducts'
+    name: 'SectionOurProducts'
 }
 </script>
 
@@ -19,7 +19,7 @@ export default {
                 <i class="fa-solid fa-chevron-right"></i>
                 <div class="card">
                     <img src="/img/choco-chip-cookies-400x510.jpg" alt="choco-chip-cookies">
-                    <div class="product_info">
+                    <div class="info">
                         <div class="name">Choco Chip Cookies</div>
                         <div class="category">Cookies, Patries</div>
                         <div class="prices">
@@ -30,7 +30,7 @@ export default {
                 </div>
                 <div class="card">
                     <img src="/img/strawberry-jam-cookies-400x510.jpg" alt="strawberry-jam-cookies">
-                    <div class="product_info">
+                    <div class="info">
                         <div class="name">Choco Chip Cookies</div>
                         <div class="category">Cookies, Patries</div>
                         <div class="prices">
@@ -62,56 +62,6 @@ section.our_products {
         gap: 1rem;
         position: relative;
         align-items: center;
-
-        .card {
-            width: 50%;
-            height: 100%;
-            position: relative;
-
-            &:hover .product_info {
-                opacity: 1;
-            }
-
-            & img {
-                width: 100%;
-                height: 100%;
-                display: block;
-                object-fit: cover;
-            }
-
-            .product_info {
-                display: flex;
-                opacity: 0;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
-                position: absolute;
-                background-color: rgba(37, 37, 37, 0.399);
-                inset: 0;
-                width: 100%;
-                height: 100%;
-                color: var(--bake-light);
-                transition: opacity .25s ease;
-
-                .name {
-                    font-family: var(--ff-noto-serif);
-                    font-weight: 700;
-                    letter-spacing: 0;
-                }
-
-                .category {
-                    font-size: .6rem;
-                }
-
-                .prices {
-                    margin-top: .8rem;
-
-                    & span {
-                        margin: 0 .5rem;
-                    }
-                }
-            }
-        }
 
         & i {
             z-index: 1;

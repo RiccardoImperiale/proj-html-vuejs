@@ -1,15 +1,14 @@
 <script>
 import SectionHero from './SectionHero.vue';
-import SectionProducts from './SectionProducts.vue';
+import SectionMoments from './SectionMoments.vue';
+import SectionOurProducts from './SectionOurProducts.vue';
 
 export default {
     name: 'AppMain',
     components: {
         SectionHero,
-        SectionProducts
-    },
-    props: {
-        navLinks: Array
+        SectionOurProducts,
+        SectionMoments
     }
 }
 </script>
@@ -17,24 +16,8 @@ export default {
 <template>
     <main>
         <SectionHero />
-        <SectionProducts />
-        <!-- moments -->
-        <section class="moments">
-            <div class="container">
-                <div class="section_text">
-                    <h6>corporate & weddings</h6>
-                    <h3>Baking Special Moments</h3>
-                </div>
-                <div class="section_images">
-                    <div class="image">
-                        <img src="/img/corporate-bg.jpg" alt="corporate">
-                    </div>
-                    <div class="image">
-                        <img src="/img/wedding-bg.jpg" alt="wedding">
-                    </div>
-                </div>
-            </div>
-        </section>
+        <SectionOurProducts />
+        <SectionMoments />
     </main>
 </template>
 
@@ -42,126 +25,54 @@ export default {
 section {
     padding-top: 8rem;
 
-}
-
-section.our_products {
-    .container {
-        display: flex;
-    }
-
-    .section_text {
-        width: 40%;
-        padding-right: 5rem;
-    }
-
-    .carousel {
-        width: 60%;
-        display: flex;
-        height: 510px;
-        gap: 1rem;
+    .card {
+        width: 50%;
+        height: 100%;
         position: relative;
-        align-items: center;
 
-        .image {
-            width: 50%;
+        &:hover .info {
+            opacity: 1;
+        }
+
+        & img {
+            width: 100%;
             height: 100%;
-            position: relative;
-
-            &:hover .product_info {
-                opacity: 1;
-            }
-
-            & img {
-                width: 100%;
-                height: 100%;
-                display: block;
-                object-fit: cover;
-            }
-
-            .product_info {
-                display: flex;
-                opacity: 0;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
-                position: absolute;
-                background-color: rgba(37, 37, 37, 0.399);
-                inset: 0;
-                width: 100%;
-                height: 100%;
-                color: var(--bake-light);
-                transition: opacity .25s ease;
-
-                .name {
-                    font-family: var(--ff-noto-serif);
-                    font-weight: 700;
-                    letter-spacing: 0;
-                }
-
-                .category {
-                    font-size: .6rem;
-                }
-
-                .prices {
-                    margin-top: .8rem;
-
-                    & span {
-                        margin: 0 .5rem;
-                    }
-                }
-            }
+            display: block;
+            object-fit: cover;
         }
 
-        & i {
-            z-index: 1;
+        .info {
+            display: flex;
+            opacity: 0;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
             position: absolute;
-            background-color: var(--bake-primary-light);
-            padding: 1.4rem .6rem;
-            cursor: pointer;
-            color: var(--bake-secondary);
-            transition: background-color .25s ease;
+            background-color: rgba(37, 37, 37, 0.399);
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            color: var(--bake-light);
+            transition: opacity .25s ease;
 
-            &:hover {
-                background-color: var(--bake-primary);
+            .name {
+                font-family: var(--ff-noto-serif);
+                font-weight: 700;
+                letter-spacing: 0;
             }
-        }
 
-        .fa-chevron-left {
-            left: 0;
-        }
+            .category {
+                font-size: .6rem;
+            }
 
-        .fa-chevron-right {
-            right: 0;
-        }
-    }
-}
+            .prices {
+                margin-top: .8rem;
 
-section.moments {
-
-    .container {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-    }
-
-    .section_images {
-        display: flex;
-        gap: 4rem;
-        margin-top: 1.4rem;
-
-        .image {
-
-            & img {
-                width: 100%;
-                height: 100%;
-                display: block;
-                object-fit: cover;
-
+                & span {
+                    margin: 0 .5rem;
+                }
             }
         }
     }
-
-
 }
 </style>
