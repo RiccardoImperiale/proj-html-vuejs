@@ -9,7 +9,38 @@ export default {
 </script>
 
 <template>
-  header
+  <header>
+    <nav>
+      <img width="150" src="/img/avada-bakery-logo-retina-200x97.png" alt="logo bakery">
+      <ul class="nav_links">
+        <li><a href="#">home</a></li>
+        <li><a href="#">shop</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">gallery</a></li>
+        <li><a href="#">locations</a></li>
+        <li><a href="#">journal</a></li>
+        <li><a href="#">contact</a></li>
+        <li><a href="#">my account</a></li>
+        <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
-<style></style>
+<style>
+header {
+  padding: 1rem 2rem;
+
+  & nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav_links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}
+</style>

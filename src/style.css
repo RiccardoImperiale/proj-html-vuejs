@@ -1,6 +1,10 @@
-/* :root {
-
-} */
+:root {
+  --bake-light: #FFFFFF;
+  --bake-primary: #55328b;
+  --bake-secondary: #F0EDF5;
+  --bake-secondary-lighter: #F2EEF4;
+  --bake-accent: #F9F1F1F2;
+}
 
 * {
   margin: 0;
