@@ -41,16 +41,15 @@ header {
       display: flex;
       gap: 1.6rem;
       text-transform: uppercase;
-      font-weight: 600;
+      font-weight: 500;
       letter-spacing: .05rem;
-      font-size: .8rem;
+      font-size: .7rem;
 
       & li {
         padding: .25rem 0;
 
         & a {
           text-decoration: none;
-          color: var(--bake-primary);
         }
       }
 
@@ -61,7 +60,6 @@ header {
       .fa-cart-shopping {
         margin-left: .5rem;
       }
-
     }
   }
 }
