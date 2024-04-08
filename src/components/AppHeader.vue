@@ -43,7 +43,7 @@ header {
       text-transform: uppercase;
       font-weight: 500;
       letter-spacing: .05rem;
-      font-size: .7rem;
+      font-size: .75rem;
 
       & li {
         padding: .25rem 0;

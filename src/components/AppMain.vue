@@ -16,7 +16,7 @@ export default {
     <main>
         <SectionHero />
         <!-- products -->
-        <section class="products">
+        <section class="our_products">
             <div class="container">
                 <div class="section_text">
                     <h6>our products</h6>
@@ -36,13 +36,33 @@ export default {
                 </div>
             </div>
         </section>
+        <!-- moments -->
+        <section class="moments">
+            <div class="container">
+                <div class="section_text">
+                    <h6>corporate & weddings</h6>
+                    <h3>Baking Special Moments</h3>
+                </div>
+                <div class="section_images">
+                    <div class="image">
+                        <img src="/img/corporate-bg.jpg" alt="corporate">
+                    </div>
+                    <div class="image">
+                        <img src="/img/wedding-bg.jpg" alt="wedding">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </template>
 
 <style>
-section.products {
+section {
     padding: 8rem 0;
 
+}
+
+section.our_products {
     .container {
         display: flex;
     }
@@ -94,5 +114,34 @@ section.products {
         }
 
     }
+}
+
+section.moments {
+
+    .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .section_images {
+        display: flex;
+        gap: 4rem;
+        margin-top: 1.4rem;
+
+        .image {
+
+            & img {
+                width: 100%;
+                height: 100%;
+                display: block;
+                object-fit: cover;
+
+            }
+        }
+    }
+
+
 }
 </style>
