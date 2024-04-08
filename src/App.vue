@@ -7,14 +7,23 @@ export default {
   },
   data() {
     return {
-
+      navLinks: [
+        { href: '#', text: 'home' },
+        { href: '#', text: 'shop' },
+        { href: '#', text: 'about' },
+        { href: '#', text: 'gallery' },
+        { href: '#', text: 'locations' },
+        { href: '#', text: 'journal' },
+        { href: '#', text: 'contact' },
+        { href: '#', text: 'my account' },
+      ]
     }
   }
 }
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader :navLinks="navLinks" />
   <section class="hero">
     <div class="container">
       <div class="hero_text">

@@ -1,8 +1,12 @@
 <script>
 export default {
   name: 'AppHeader',
+  props: {
+    navLinks: Array
+  },
   data() {
     return {
+
     }
   }
 }
@@ -13,14 +17,7 @@ export default {
     <nav>
       <img width="150" src="/img/avada-bakery-logo-retina-200x97.png" alt="logo bakery">
       <ul class="nav_links">
-        <li><a href="#">home</a></li>
-        <li><a href="#">shop</a></li>
-        <li><a href="#">about</a></li>
-        <li><a href="#">gallery</a></li>
-        <li><a href="#">locations</a></li>
-        <li><a href="#">journal</a></li>
-        <li><a href="#">contact</a></li>
-        <li><a href="#">my account</a></li>
+        <li v-for="link in navLinks" :key="link.text"><a href="#">{{ link.text }}</a></li>
         <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
       </ul>
     </nav>
