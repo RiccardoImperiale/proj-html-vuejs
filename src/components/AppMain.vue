@@ -1,14 +1,16 @@
 <script>
 import SectionHero from './SectionHero.vue';
+import SectionProducts from './SectionProducts.vue';
 import SectionMoments from './SectionMoments.vue';
-import SectionOurProducts from './SectionOurProducts.vue';
+import SectionShop from './SectionShop.vue';
 
 export default {
     name: 'AppMain',
     components: {
         SectionHero,
-        SectionOurProducts,
-        SectionMoments
+        SectionProducts,
+        SectionMoments,
+        SectionShop
     }
 }
 </script>
@@ -16,8 +18,9 @@ export default {
 <template>
     <main>
         <SectionHero />
-        <SectionOurProducts />
+        <SectionProducts />
         <SectionMoments />
+        <SectionShop />
     </main>
 </template>
 

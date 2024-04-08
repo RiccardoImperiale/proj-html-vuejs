@@ -67,10 +67,6 @@ section.moments {
                 font-weight: 400;
             }
 
-            & h3 {
-                margin-bottom: 0;
-            }
-
             & button {
                 margin: auto;
             }

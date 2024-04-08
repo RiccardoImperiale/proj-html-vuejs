@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'SectionOurProducts'
+    name: 'SectionProducts'
 }
 </script>
 
@@ -15,8 +15,10 @@ export default {
                 <button class="btn-negative">Start Shopping</button>
             </div>
             <div class="carousel">
+                <!-- arrows control -->
                 <i class="fa-solid fa-chevron-left"></i>
                 <i class="fa-solid fa-chevron-right"></i>
+                <!-- cards -->
                 <div class="card">
                     <img src="/img/choco-chip-cookies-400x510.jpg" alt="choco-chip-cookies">
                     <div class="info">
@@ -53,6 +55,10 @@ section.our_products {
     .section_text {
         width: 40%;
         padding-right: 5rem;
+
+        & h3 {
+            margin-bottom: 1.6rem;
+        }
     }
 
     .carousel {
