@@ -39,7 +39,29 @@ header {
     .nav_links {
       list-style: none;
       display: flex;
-      gap: 1rem;
+      gap: 1.6rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: .05rem;
+      font-size: .8rem;
+
+      & li {
+        padding: .25rem 0;
+
+        & a {
+          text-decoration: none;
+          color: var(--bake-primary);
+        }
+      }
+
+      & li:first-child {
+        border-bottom: 2px solid var(--bake-primary);
+      }
+
+      .fa-cart-shopping {
+        margin-left: .5rem;
+      }
+
     }
   }
 }
