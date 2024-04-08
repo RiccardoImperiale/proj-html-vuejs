@@ -1,49 +1,50 @@
 <script>
-import SectionHero from './SectionHero.vue';
-import SectionProducts from './SectionProducts.vue';
-
 export default {
-    name: 'AppMain',
-    components: {
-        SectionHero,
-        SectionProducts
-    },
-    props: {
-        navLinks: Array
-    }
+    name: 'SectionProducts'
 }
 </script>
 
 <template>
-    <main>
-        <SectionHero />
-        <SectionProducts />
-        <!-- moments -->
-        <section class="moments">
-            <div class="container">
-                <div class="section_text">
-                    <h6>corporate & weddings</h6>
-                    <h3>Baking Special Moments</h3>
-                </div>
-                <div class="section_images">
-                    <div class="image">
-                        <img src="/img/corporate-bg.jpg" alt="corporate">
+    <!-- products -->
+    <section class="our_products">
+        <div class="container">
+            <div class="section_text">
+                <h6>our products</h6>
+                <h3>All our delectable pastries are baked fresh in our Kitchen each morning, and are made with
+                    all-natural, all organic ingredients.</h3>
+                <button class="btn-negative">Start Shopping</button>
+            </div>
+            <div class="carousel">
+                <i class="fa-solid fa-chevron-left"></i>
+                <i class="fa-solid fa-chevron-right"></i>
+                <div class="card">
+                    <img src="/img/choco-chip-cookies-400x510.jpg" alt="choco-chip-cookies">
+                    <div class="product_info">
+                        <div class="name">Choco Chip Cookies</div>
+                        <div class="category">Cookies, Patries</div>
+                        <div class="prices">
+                            <span>$19.00</span>
+                            <span>$39.00</span>
+                        </div>
                     </div>
-                    <div class="image">
-                        <img src="/img/wedding-bg.jpg" alt="wedding">
+                </div>
+                <div class="card">
+                    <img src="/img/strawberry-jam-cookies-400x510.jpg" alt="strawberry-jam-cookies">
+                    <div class="product_info">
+                        <div class="name">Choco Chip Cookies</div>
+                        <div class="category">Cookies, Patries</div>
+                        <div class="prices">
+                            <span>$19.00</span>
+                            <span>$39.00</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 </template>
 
 <style>
-section {
-    padding-top: 8rem;
-
-}
-
 section.our_products {
     .container {
         display: flex;
@@ -62,7 +63,7 @@ section.our_products {
         position: relative;
         align-items: center;
 
-        .image {
+        .card {
             width: 50%;
             height: 100%;
             position: relative;
@@ -134,34 +135,5 @@ section.our_products {
             right: 0;
         }
     }
-}
-
-section.moments {
-
-    .container {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-    }
-
-    .section_images {
-        display: flex;
-        gap: 4rem;
-        margin-top: 1.4rem;
-
-        .image {
-
-            & img {
-                width: 100%;
-                height: 100%;
-                display: block;
-                object-fit: cover;
-
-            }
-        }
-    }
-
-
 }
 </style>

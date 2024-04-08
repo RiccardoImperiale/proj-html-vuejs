@@ -6,6 +6,9 @@
   --bake-secondary-dark: #5b5b5b;
   --bake-secondary-lighter: #F2EEF4;
   --bake-accent: #F9F1F1F2;
+
+  --ff-noto-sans: "Noto Sans", sans-serif;
+  --ff-noto-serif: "Noto Serif", sans-serif;
 }
 
 * {
@@ -15,7 +18,7 @@
 }
 
 body {
-  font-family: "Noto Sans", sans-serif;
+  font-family: var(--ff-noto-sans);
   color: var(--bake-primary);
   letter-spacing: .04rem;
 }
@@ -58,7 +61,7 @@ button {
 
 h2,
 h3 {
-  font-family: "Noto Serif", serif;
+  font-family: var(--ff-noto-serif);
   letter-spacing: 0;
 }
 
