@@ -27,6 +27,9 @@ export default {
 <style>
 header {
   padding: 1rem 2rem;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
 
   & nav {
     display: flex;
@@ -55,7 +58,7 @@ header {
       }
 
       .fa-cart-shopping {
-        margin-left: .5rem;
+        font-size: .8rem;
       }
     }
   }
