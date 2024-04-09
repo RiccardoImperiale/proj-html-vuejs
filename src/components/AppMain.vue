@@ -5,6 +5,7 @@ import SectionMoments from './SectionMoments.vue';
 import SectionShop from './SectionShop.vue';
 import SectionProcess from './SectionProcess.vue';
 import SectionLocations from './SectionLocations.vue';
+import SectionSocial from './SectionSocial.vue';
 
 export default {
     name: 'AppMain',
@@ -14,7 +15,8 @@ export default {
         SectionMoments,
         SectionShop,
         SectionProcess,
-        SectionLocations
+        SectionLocations,
+        SectionSocial
     }
 }
 </script>
@@ -27,7 +29,7 @@ export default {
         <SectionShop />
         <SectionProcess />
         <SectionLocations />
-
+        <SectionSocial />
     </main>
 </template>
 

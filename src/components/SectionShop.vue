@@ -123,8 +123,6 @@ section.shop {
                         }
                     }
                 }
-
-
             }
 
             & i {
