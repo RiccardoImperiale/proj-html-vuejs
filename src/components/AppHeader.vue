@@ -8,25 +8,34 @@ export default {
         return {
             isTransparent: true,
             isHidden: false,
-            isWhite: false
+            isWhite: false,
+            scrollPosition: 0
         };
     },
     mounted() {
         window.addEventListener('scroll', () => {
             const scroll = window.scrollY;
             if (scroll > 600) {
-                this.isHidden = true;
-                this.isTransparent = false;
-                this.isWhite = true;
+                if (scroll > this.lastScrollPosition) {
+                    this.isHidden = true;
+                    this.isWhite = true;
+                    this.isTransparent = false;
+                } else {
+                    this.isHidden = false;
+                }
             } else if (scroll > 30) {
-                this.isHidden = false;
-                this.isTransparent = false;
-                this.isWhite = true;
+                if (scroll > this.lastScrollPosition) {
+                    this.isHidden = false;
+                    this.isWhite = true;
+                } else {
+                    this.isTransparent = false;
+                }
             } else {
-                this.isTransparent = true;
                 this.isHidden = false;
                 this.isWhite = false;
+                this.isTransparent = true;
             }
+            this.lastScrollPosition = scroll;
         });
     }
 }
@@ -49,16 +58,17 @@ header {
     padding: .8rem 2rem;
     position: fixed;
     width: 100%;
-    z-index: 1;
-    transition: background-color 0.5s, opacity 0.25s;
+    z-index: 100;
+    transition: background-color 0.5s ease, transform 0.25s ease;
+    border-bottom: 1px solid var(--bake-secondary);
+    transform: translateY(0);
 
     &.transparent {
         background-color: transparent;
     }
 
     &.hidden {
-        opacity: 0;
-        pointer-events: none;
+        transform: translateY(-100%);
     }
 
     &.white_bg {

@@ -31,7 +31,7 @@ export default {
                 <i class="fa-solid fa-dollar-sign"></i>
                 <h3>39</h3>
             </div>
-            <span>Demos</span>
+            <span>On Sale</span>
         </div>
     </div>
 </template>
