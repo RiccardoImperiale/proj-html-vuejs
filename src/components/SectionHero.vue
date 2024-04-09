@@ -5,23 +5,21 @@ export default {
 </script>
 
 <template>
-    <main>
-        <!-- hero -->
-        <section class="hero">
-            <div class="container">
-                <div class="section_text">
-                    <h6>fresh & tasty bakery every day</h6>
-                    <h2>The Perfect Fresh Bread</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quaerat tempore officiis corporis
-                        possimus ut
-                        animi doloribus placeat labore sequi quasi cum quis.
-                    </p>
-                    <button>Explore our products</button>
-                </div>
+    <!-- hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="section_text">
+                <h6>fresh & tasty bakery every day</h6>
+                <h2>The Perfect Fresh Bread</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quaerat tempore officiis corporis
+                    possimus ut
+                    animi doloribus placeat labore sequi quasi cum quis.
+                </p>
+                <button>Explore our products</button>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 </template>
 
 <style>

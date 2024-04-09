@@ -33,6 +33,12 @@ body {
     margin: auto;
 }
 
+.container-sm {
+    max-width: 1024px;
+    width: 85%;
+    margin: auto;
+}
+
 .btn-negative {
     background-color: var(--bake-primary);
     color: var(--bake-light);
