@@ -91,7 +91,7 @@ section {
             transition: opacity .25s ease;
 
             .name {
-                font-family: var(--ff-noto-serif);
+                font-family: var(--ff-source);
                 font-weight: 700;
                 letter-spacing: 0;
             }

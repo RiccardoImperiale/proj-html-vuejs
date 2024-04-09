@@ -84,6 +84,7 @@ footer {
 
                 & a {
                     text-decoration: none;
+                    color: var(--bake-primary);
                 }
             }
 

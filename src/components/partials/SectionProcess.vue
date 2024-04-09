@@ -102,7 +102,7 @@ section.process {
             content: '';
             position: absolute;
             inset: 0;
-            background-color: rgba(39, 39, 39, 0.5);
+            background-color: rgba(0, 0, 0, 0.566);
             z-index: -1;
         }
 
@@ -138,11 +138,13 @@ section.process {
                 text-transform: uppercase;
                 font-weight: 200;
                 margin-bottom: .8rem;
+                font-size: .8rem;
             }
 
             & p {
-                font-size: .8rem;
-                line-height: 1.2rem;
+                font-size: 1rem;
+                line-height: 1.4rem;
+                font-weight: 400;
             }
         }
     }

@@ -25,7 +25,7 @@ export default {
                             </div>
                         </div>
                         <div class="middle">
-                            <h2>New York</h2>
+                            <h3>New York</h3>
                             <div class="bottom">
                                 <h6>OPEN ALL WEEK</h6>
                                 <h6>9:00 AM - 6:00 PM</h6>
@@ -48,7 +48,7 @@ export default {
                             </div>
                         </div>
                         <div class="middle">
-                            <h2>London</h2>
+                            <h3>London</h3>
                             <div class="bottom">
                                 <h6>OPEN ALL WEEK</h6>
                                 <h6>9:00 AM - 6:00 PM</h6>
@@ -86,10 +86,11 @@ section.locations {
             text-align: center;
             gap: 1rem;
 
-            & h2 {
+            & h3 {
                 text-align: center;
                 justify-content: center;
                 margin-bottom: 1rem;
+                font-size: 1.8rem;
             }
 
             .bottom {
@@ -102,6 +103,7 @@ section.locations {
                 & h6 {
                     color: var(--bake-secondary-dark);
                     font-weight: 400;
+                    font-size: .8rem;
                 }
             }
         }

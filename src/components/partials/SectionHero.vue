@@ -88,7 +88,7 @@ section.hero {
 
                 & h3 {
                     line-height: 1rem;
-                    font-family: var(--ff-noto-sans);
+                    font-family: var(--ff-work);
                 }
 
                 .fa-dollar-sign {

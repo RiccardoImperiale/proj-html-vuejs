@@ -10,8 +10,8 @@
     --bake-accent: #F9F1F1F2;
     --bake-scroll: #F5E9F3;
 
-    --ff-noto-sans: "Noto Sans", sans-serif;
-    --ff-noto-serif: "Noto Serif", sans-serif;
+    --ff-source: "Source Serif 4", serif;
+    --ff-work: "Work Sans", sans-serif;
 }
 
 * {
@@ -26,7 +26,7 @@ html {
 }
 
 body {
-    font-family: var(--ff-noto-sans);
+    font-family: var(--ff-work);
     color: var(--bake-primary);
     letter-spacing: .04rem;
 }
@@ -81,7 +81,7 @@ a:active {
 
 h2,
 h3 {
-    font-family: var(--ff-noto-serif);
+    font-family: var(--ff-source);
     letter-spacing: 0;
 }
 
@@ -94,22 +94,22 @@ h3 {
         text-transform: uppercase;
         color: var(--bake-secondary-dark);
         font-weight: 400;
+        font-size: .8rem;
     }
 
     & h2 {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
         line-height: 3rem;
     }
 
     & h3 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         line-height: 2rem;
     }
 
     & p {
         color: var(--bake-secondary-dark);
         font-weight: 300;
-        font-size: .9rem;
         line-height: 1.5rem;
     }
 
