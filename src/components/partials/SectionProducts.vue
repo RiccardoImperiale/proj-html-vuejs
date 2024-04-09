@@ -1,6 +1,41 @@
 <script>
 export default {
-    name: 'SectionProducts'
+    name: 'SectionProducts',
+    data() {
+        return {
+            active: [0, 1],
+            images: [
+                { src: '/img/choco-chip-cookies-400x510.jpg', name: 'Choco Chip Cookies', category: 'Cookies, Patries', price: { min: '19.00', max: '39.00' }, },
+                { src: '/img/strawberry-jam-cookies-400x510.jpg', name: 'Strawberry Jam Cookies', category: 'Cookies, Patries', price: { min: '19.00', max: '39.00' }, },
+                { src: '/img/cherry-cake-400x510.jpg', name: 'Cherry Cake', category: 'Cakes', price: { min: '21.00', max: '49.00' }, },
+                { src: '/img/cookies-with-ice-cream-400x510.jpg', name: 'Cookies With Ice Cream', category: 'Ice Cream', price: { min: '8.00', max: '12.00' }, },
+                { src: '/img/perfect-macarons-400x510.jpg', name: 'Perfect Macarons', category: 'Cookies, Patries', price: { min: '14.00', max: '41.00' }, },
+                { src: '/img/blackberry-stuffed-bread-400x510.jpg', name: 'Blackberry Stuffed Bread', category: 'Bread, Patries', price: { min: '11.00', max: '31.00' }, },
+                { src: '/img/glazed-pancake-with-lemon-400x510.jpg', name: 'Glazed Pancake With Lemon', category: 'Cakes, Patries', price: { min: '12.00', max: '32.00' }, },
+                { src: '/img/home-bread-400x510.jpg', name: 'Home Bread', category: 'Bread, Patries', price: { min: '9.00', max: '11.00' }, },
+            ],
+        };
+    },
+    methods: {
+        prev() {
+            if (this.active[0] > 0) {
+                this.active[0]--;
+                this.active[1]--;
+            } else {
+                this.active[0] = this.images.length - 2;
+                this.active[1] = this.images.length - 1;
+            }
+        },
+        next() {
+            if (this.active[1] < this.images.length - 1) {
+                this.active[0]++;
+                this.active[1]++;
+            } else {
+                this.active[0] = 0;
+                this.active[1] = 1;
+            }
+        }
+    }
 }
 </script>
 
@@ -16,31 +51,33 @@ export default {
             </div>
             <div class="carousel">
                 <!-- arrows control -->
-                <i class="fa-solid fa-chevron-left"></i>
-                <i class="fa-solid fa-chevron-right"></i>
+                <i @click="prev" class="fa-solid fa-chevron-left"></i>
+                <i @click="next" class="fa-solid fa-chevron-right"></i>
                 <!-- cards -->
-                <div class="card">
-                    <img src="/img/choco-chip-cookies-400x510.jpg" alt="choco-chip-cookies">
-                    <div class="info">
-                        <div class="name">Choco Chip Cookies</div>
-                        <div class="category">Cookies, Patries</div>
-                        <div class="prices">
-                            <span>$19.00</span>
-                            <span>$39.00</span>
+                <template v-for="(image, index) in images" :key="image.name">
+                    <div v-if="active[0] === index" class="card">
+                        <img :src="image.src" alt="choco-chip-cookies">
+                        <div class="info">
+                            <div class="name">{{ image.name }}</div>
+                            <div class="category">{{ image.category }}</div>
+                            <div class="prices">
+                                <span>${{ image.price.min }}</span>
+                                <span>${{ image.price.max }}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="/img/strawberry-jam-cookies-400x510.jpg" alt="strawberry-jam-cookies">
-                    <div class="info">
-                        <div class="name">Choco Chip Cookies</div>
-                        <div class="category">Cookies, Patries</div>
-                        <div class="prices">
-                            <span>$19.00</span>
-                            <span>$39.00</span>
+                    <div v-if="active[1] === index" class="card">
+                        <img :src="image.src" alt="strawberry-jam-cookies">
+                        <div class="info">
+                            <div class="name">{{ image.name }}</div>
+                            <div class="category">{{ image.category }}</div>
+                            <div class="prices">
+                                <span>${{ image.price.min }}</span>
+                                <span>${{ image.price.max }}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </template>
             </div>
         </div>
     </section>
