@@ -2,7 +2,7 @@
 export default {
   name: 'AppHeader',
   props: {
-    navLinks: Array
+    navLinks: Object
   }
 }
 </script>
@@ -12,7 +12,7 @@ export default {
     <nav>
       <img width="150" src="/img/avada-bakery-logo-retina-200x97.png" alt="logo bakery">
       <ul class="nav_links">
-        <li v-for="link in navLinks" :key="link.text"><a href="#">{{ link.text }}</a></li>
+        <li v-for="link in navLinks.header" :key="link.text"><a href="#">{{ link.text }}</a></li>
         <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
       </ul>
     </nav>
