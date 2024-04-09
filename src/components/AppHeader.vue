@@ -16,7 +16,7 @@ export default {
         window.addEventListener('scroll', () => {
             const scroll = window.scrollY;
             if (scroll > 600) {
-                if (scroll > this.lastScrollPosition) {
+                if (scroll > this.scrollPosition) {
                     this.isHidden = true;
                     this.isWhite = true;
                     this.isTransparent = false;
@@ -24,7 +24,7 @@ export default {
                     this.isHidden = false;
                 }
             } else if (scroll > 30) {
-                if (scroll > this.lastScrollPosition) {
+                if (scroll > this.scrollPosition) {
                     this.isHidden = false;
                     this.isWhite = true;
                 } else {
@@ -35,7 +35,7 @@ export default {
                 this.isWhite = false;
                 this.isTransparent = true;
             }
-            this.lastScrollPosition = scroll;
+            this.scrollPosition = scroll;
         });
     }
 }
