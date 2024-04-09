@@ -16,14 +16,11 @@ export default {
                 <div class="card">
                     <img src="/img/corporate-bg.jpg" alt="corporate">
                     <div class="info">
-                        <img src="/img/corporate-hover-bg.jpg" alt="corporate">
-                        <div class="info">
-                            <img src="/img/wedding-hover-bg.jpg" alt="wedding cake">
-                            <div class="section_text">
-                                <h6>international bakery</h6>
-                                <h3>Corporate Events</h3>
-                                <button class="btn-negative">Explore More</button>
-                            </div>
+                        <img src="/img/corporate-hover-bg.jpg" alt="wedding cake">
+                        <div class="section_text">
+                            <h6>international bakery</h6>
+                            <h3>Corporate Events</h3>
+                            <button class="btn-negative">Explore More</button>
                         </div>
                     </div>
                 </div>
