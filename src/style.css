@@ -29,6 +29,7 @@ body {
     font-family: var(--ff-work);
     color: var(--bake-primary);
     letter-spacing: .04rem;
+    background-color: var(--bake-light);
 }
 
 /* utilities --------------------------------------------> */
