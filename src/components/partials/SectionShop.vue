@@ -24,17 +24,13 @@ export default {
             }
         },
         next() {
-            console.log(this.active[3]);
             if (this.active[3] < this.images.length - 1) {
                 this.active[0]++;
                 this.active[1]++;
                 this.active[2]++;
                 this.active[3]++;
             } else {
-                this.active[0] = 0;
-                this.active[1] = 1;
-                this.active[2] = 2;
-                this.active[3] = 3;
+                this.active = [0, 1, 2, 3]
             }
         }
     }
@@ -59,34 +55,7 @@ export default {
                 <i @click="next" class="fa-solid fa-chevron-right"></i>
                 <!-- cards -->
                 <template v-for="(image, index) in images" :key="image.name">
-                    <div v-if="active[0] === index" class="card">
-                        <img :src="image.src" alt="choco-chip-cookies">
-                        <div class="info">
-                            <div class="name">{{ image.name }}</div>
-                            <div class="prices">
-                                <span>${{ image.price.min }} - ${{ image.price.max }}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div v-if="active[1] === index" class="card">
-                        <img :src="image.src" alt="choco-chip-cookies">
-                        <div class="info">
-                            <div class="name">{{ image.name }}</div>
-                            <div class="prices">
-                                <span>${{ image.price.min }} - ${{ image.price.max }}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div v-if="active[2] === index" class="card">
-                        <img :src="image.src" alt="choco-chip-cookies">
-                        <div class="info">
-                            <div class="name">{{ image.name }}</div>
-                            <div class="prices">
-                                <span>${{ image.price.min }} - ${{ image.price.max }}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div v-if="active[3] === index" class="card">
+                    <div v-if="active.includes(index)" class="card">
                         <img :src="image.src" alt="choco-chip-cookies">
                         <div class="info">
                             <div class="name">{{ image.name }}</div>
@@ -96,7 +65,6 @@ export default {
                         </div>
                     </div>
                 </template>
-
             </div>
         </div>
     </section>
