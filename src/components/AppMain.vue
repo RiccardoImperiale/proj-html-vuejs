@@ -1,11 +1,11 @@
 <script>
-import SectionHero from './SectionHero.vue';
-import SectionProducts from './SectionProducts.vue';
-import SectionMoments from './SectionMoments.vue';
-import SectionShop from './SectionShop.vue';
-import SectionProcess from './SectionProcess.vue';
-import SectionLocations from './SectionLocations.vue';
-import SectionSocial from './SectionSocial.vue';
+import SectionHero from './partials/SectionHero.vue';
+import SectionProducts from './partials/SectionProducts.vue';
+import SectionMoments from './partials/SectionMoments.vue';
+import SectionShop from './partials/SectionShop.vue';
+import SectionProcess from './partials/SectionProcess.vue';
+import SectionLocations from './partials/SectionLocations.vue';
+import SectionSocial from './partials/SectionSocial.vue';
 import AppBanner from './AppBanner.vue';
 
 export default {
