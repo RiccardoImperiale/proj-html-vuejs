@@ -1,6 +1,43 @@
 <script>
 export default {
-    name: 'SectionShop'
+    name: 'SectionShop',
+    props: {
+        images: Array
+    },
+    data() {
+        return {
+            active: [0, 1, 2, 3],
+        }
+    },
+    methods: {
+        prev() {
+            if (this.active[0] > 0) {
+                this.active[0]--;
+                this.active[1]--;
+                this.active[2]--;
+                this.active[3]--;
+            } else {
+                this.active[0] = this.images.length - 4;
+                this.active[1] = this.images.length - 3;
+                this.active[2] = this.images.length - 2;
+                this.active[3] = this.images.length - 1;
+            }
+        },
+        next() {
+            console.log(this.active[3]);
+            if (this.active[3] < this.images.length - 1) {
+                this.active[0]++;
+                this.active[1]++;
+                this.active[2]++;
+                this.active[3]++;
+            } else {
+                this.active[0] = 0;
+                this.active[1] = 1;
+                this.active[2] = 2;
+                this.active[3] = 3;
+            }
+        }
+    }
 }
 </script>
 
@@ -18,45 +55,48 @@ export default {
             </div>
             <div class="carousel">
                 <!-- arrows control -->
-                <i class="fa-solid fa-chevron-left"></i>
-                <i class="fa-solid fa-chevron-right"></i>
+                <i @click="prev" class="fa-solid fa-chevron-left"></i>
+                <i @click="next" class="fa-solid fa-chevron-right"></i>
                 <!-- cards -->
-                <div class="card">
-                    <img src="/img/choco-chip-cookies-400x510.jpg" alt="choco-chip-cookies">
-                    <div class="info">
-                        <div class="name">Choco Chip Cookies</div>
-                        <div class="prices">
-                            <span>$19.00 - $39.00</span>
+                <template v-for="(image, index) in images" :key="image.name">
+                    <div v-if="active[0] === index" class="card">
+                        <img :src="image.src" alt="choco-chip-cookies">
+                        <div class="info">
+                            <div class="name">{{ image.name }}</div>
+                            <div class="prices">
+                                <span>${{ image.price.min }} - ${{ image.price.max }}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="/img/strawberry-jam-cookies-400x510.jpg" alt="strawberry-jam-cookies">
-                    <div class="info">
-                        <div class="name">Strawberry Jam Cookies</div>
-                        <div class="prices">
-                            <span>$19.00 - $39.00</span>
+                    <div v-if="active[1] === index" class="card">
+                        <img :src="image.src" alt="choco-chip-cookies">
+                        <div class="info">
+                            <div class="name">{{ image.name }}</div>
+                            <div class="prices">
+                                <span>${{ image.price.min }} - ${{ image.price.max }}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="/img/strawberry-jam-cookies-400x510.jpg" alt="strawberry-jam-cookies">
-                    <div class="info">
-                        <div class="name">Strawberry Jam Cookies</div>
-                        <div class="prices">
-                            <span>$19.00 - $39.00</span>
+                    <div v-if="active[2] === index" class="card">
+                        <img :src="image.src" alt="choco-chip-cookies">
+                        <div class="info">
+                            <div class="name">{{ image.name }}</div>
+                            <div class="prices">
+                                <span>${{ image.price.min }} - ${{ image.price.max }}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="/img/strawberry-jam-cookies-400x510.jpg" alt="strawberry-jam-cookies">
-                    <div class="info">
-                        <div class="name">Strawberry Jam Cookies</div>
-                        <div class="prices">
-                            <span>$19.00 - $39.00</span>
+                    <div v-if="active[3] === index" class="card">
+                        <img :src="image.src" alt="choco-chip-cookies">
+                        <div class="info">
+                            <div class="name">{{ image.name }}</div>
+                            <div class="prices">
+                                <span>${{ image.price.min }} - ${{ image.price.max }}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </template>
+
             </div>
         </div>
     </section>
