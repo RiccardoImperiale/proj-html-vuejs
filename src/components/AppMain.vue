@@ -6,6 +6,7 @@ import SectionShop from './partials/SectionShop.vue';
 import SectionProcess from './partials/SectionProcess.vue';
 import SectionLocations from './partials/SectionLocations.vue';
 import SectionSocial from './partials/SectionSocial.vue';
+import ButtonScrollTop from './partials/ButtonScrollTop.vue';
 import AppBanner from './AppBanner.vue';
 
 export default {
@@ -18,8 +19,10 @@ export default {
         SectionProcess,
         SectionLocations,
         SectionSocial,
-        AppBanner
-    }
+        AppBanner,
+        ButtonScrollTop
+    },
+
 }
 </script>
 
@@ -33,6 +36,9 @@ export default {
         <SectionLocations />
         <SectionSocial />
         <AppBanner />
+
+        <ButtonScrollTop />
+
     </main>
 </template>
 

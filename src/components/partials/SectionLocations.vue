@@ -48,7 +48,7 @@ export default {
                             </div>
                         </div>
                         <div class="middle">
-                            <h2>New York</h2>
+                            <h2>London</h2>
                             <div class="bottom">
                                 <h6>OPEN ALL WEEK</h6>
                                 <h6>9:00 AM - 6:00 PM</h6>
