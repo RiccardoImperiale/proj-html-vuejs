@@ -62,7 +62,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 900;
+  z-index: 990;
 }
 
 .oval {
@@ -74,7 +74,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 990;
+  z-index: 900;
   background-color: var(--bake-scroll);
   box-shadow: 0px 200px 100px -50px rgba(92, 92, 92, 0.156);
 }
