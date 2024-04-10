@@ -3,6 +3,7 @@ import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
 import PageLoader from './components/partials/PageLoader.vue';
+import ButtonScrollTop from './components/partials/ButtonScrollTop.vue';
 
 export default {
   name: 'App',
@@ -10,7 +11,8 @@ export default {
     AppHeader,
     AppMain,
     AppFooter,
-    PageLoader
+    PageLoader,
+    ButtonScrollTop
   },
   data() {
     return {
@@ -44,6 +46,7 @@ export default {
   <PageLoader />
   <AppHeader :navLinks="navLinks" />
   <AppMain />
+  <ButtonScrollTop />
   <AppFooter :navLinks="navLinks" />
 </template>
 

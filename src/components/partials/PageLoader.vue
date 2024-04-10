@@ -4,7 +4,6 @@ export default {
   data() {
     return {
       isLoading: true,
-      // ovalHeight: '800px'
     }
   },
   mounted() {
@@ -13,7 +12,6 @@ export default {
       const gif = this.$refs.gif;
       gif.src = gif.src;
     });
-    // stop the page loader 
     setTimeout(() => {
       this.isLoading = false;
     }, 2100);
