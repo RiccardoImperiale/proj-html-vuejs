@@ -1,6 +1,4 @@
 <script>
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import SectionHero from './partials/SectionHero.vue';
 import SectionProducts from './partials/SectionProducts.vue';
 import SectionMoments from './partials/SectionMoments.vue';
@@ -35,9 +33,6 @@ export default {
                 { src: '/img/home-bread-400x510.jpg', name: 'Home Bread', category: 'Bread, Patries', price: { min: '9.00', max: '11.00' }, },
             ],
         }
-    },
-    mounted() {
-        AOS.init();
     }
 }
 </script>
