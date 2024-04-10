@@ -1,4 +1,6 @@
 <script>
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
@@ -38,6 +40,9 @@ export default {
         ]
       }
     }
+  },
+  mounted() {
+    AOS.init();
   }
 }
 </script>
