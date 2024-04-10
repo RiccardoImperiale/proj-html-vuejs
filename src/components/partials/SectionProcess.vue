@@ -1,6 +1,11 @@
 <script>
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export default {
-    name: 'SectionProcess'
+    name: 'SectionProcess',
+    mounted() {
+        AOS.init();
+    }
 }
 </script>
 
@@ -8,7 +13,7 @@ export default {
     <!-- process -->
     <section class="process">
         <div class="container">
-            <div class="banner_01">
+            <div data-aos="fade-up" class="banner_01">
                 <div class="left">
                     <h2>Tell us what you have in mind</h2>
                 </div>
@@ -24,7 +29,7 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="banner_02">
+            <div data-aos="fade-right" class="banner_02">
                 <div class="left">
                     <h2>We Start Baking</h2>
                     <div class="text">
@@ -40,7 +45,7 @@ export default {
                     <div class="number">02</div>
                 </div>
             </div>
-            <div class="banner_02b">
+            <div data-aos="fade-left" class="banner_02b">
                 <div class="section_text">
                     <h6>sweet & delicious</h6>
                     <h2>"Finally foud an alternative to the masss produced products. Something that incorporates
@@ -49,7 +54,7 @@ export default {
                     <h6>Rachel Cooper, Founder</h6>
                 </div>
             </div>
-            <div class="banner_03">
+            <div data-aos="fade-up" class="banner_03">
                 <div class="left">
                     <h2>Delivered to you home</h2>
                     <div class="text">

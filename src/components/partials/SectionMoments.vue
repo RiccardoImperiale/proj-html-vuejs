@@ -1,6 +1,11 @@
 <script>
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export default {
-    name: 'SectionMoments'
+    name: 'SectionMoments',
+    mounted() {
+        AOS.init();
+    }
 }
 </script>
 
@@ -13,7 +18,7 @@ export default {
                 <h3>Baking Special Moments</h3>
             </div>
             <div class="section_images">
-                <div class="card">
+                <div data-aos="fade-right" class="card">
                     <img src="/img/corporate-bg.jpg" alt="corporate">
                     <div class="info">
                         <img src="/img/corporate-hover-bg.jpg" alt="wedding cake">
@@ -24,7 +29,7 @@ export default {
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div data-aos="fade-left" class="card">
                     <img src="/img/wedding-bg.jpg" alt="wedding">
                     <div class="info">
                         <img src="/img/wedding-hover-bg.jpg" alt="wedding cake">

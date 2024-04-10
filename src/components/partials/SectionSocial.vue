@@ -1,6 +1,11 @@
 <script>
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export default {
-    name: 'SectionSocial'
+    name: 'SectionSocial',
+    mounted() {
+        AOS.init();
+    }
 }
 </script>
 
@@ -10,21 +15,21 @@ export default {
         <div class="container">
             <div class="cards">
                 <div class="row">
-                    <img class="square" src="/img/social-1.jpg" alt="">
-                    <div class="banner">
+                    <img data-aos="fade-up" data-aos-offset="100" class="square" src="/img/social-1.jpg" alt="">
+                    <div data-aos="fade-up" class="banner">
                         <div class="section_text">
                             <h6>made for sharing</h6>
-                            <h3>Let's stay in touch</h3>
+                            <h3 data-aos="flip-right">Let's stay in touch</h3>
                             <button class="btn-negative"><i class="fa-brands fa-instagram"></i> Follow Us</button>
                         </div>
                     </div>
-                    <img class="square" src="/img/social-2.jpg" alt="">
+                    <img data-aos="fade-up" data-aos-offset="200" class="square" src="/img/social-2.jpg" alt="">
                 </div>
                 <div class="row">
-                    <img class="square" src="/img/social-3.jpg" alt="">
-                    <img class="square" src="/img/social-4.jpg" alt="">
-                    <img class="square" src="/img/social-5.jpg" alt="">
-                    <img class="square" src="/img/social-6.jpg" alt="">
+                    <img data-aos="fade-right" data-aos-offset="100" class="square" src="/img/social-3.jpg" alt="">
+                    <img data-aos="fade-up" data-aos-offset="50" class="square" src="/img/social-4.jpg" alt="">
+                    <img data-aos="fade-up" data-aos-offset="40" class="square" src="/img/social-5.jpg" alt="">
+                    <img data-aos="fade-left" class="square" src="/img/social-6.jpg" alt="">
                 </div>
 
             </div>
