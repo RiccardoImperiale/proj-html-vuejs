@@ -112,6 +112,10 @@ footer {
     .right {
         text-align: end;
 
+        & h3 {
+            font-size: 1.8rem;
+        }
+
         .subscribe {
             margin-top: 2rem;
             display: flex;
