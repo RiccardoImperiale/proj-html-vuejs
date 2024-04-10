@@ -15,15 +15,15 @@ export default {
         <div class="container">
             <div class="cards">
                 <div class="row">
-                    <img data-aos="fade-up" data-aos-offset="100" class="square" src="/img/social-1.jpg" alt="">
-                    <div data-aos="fade-up" class="banner">
+                    <img data-aos="fade-up" data-aos-offset="200" class="square" src="/img/social-1.jpg" alt="">
+                    <div data-aos="fade-up" data-aos-offset="100" class="banner">
                         <div class="section_text">
                             <h6>made for sharing</h6>
                             <h3 data-aos="flip-right">Let's stay in touch</h3>
                             <button class="btn-negative"><i class="fa-brands fa-instagram"></i> Follow Us</button>
                         </div>
                     </div>
-                    <img data-aos="fade-up" data-aos-offset="200" class="square" src="/img/social-2.jpg" alt="">
+                    <img data-aos="fade-up" class="square" src="/img/social-2.jpg" alt="">
                 </div>
                 <div class="row">
                     <img data-aos="fade-right" data-aos-offset="100" class="square" src="/img/social-3.jpg" alt="">
