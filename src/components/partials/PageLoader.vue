@@ -4,6 +4,7 @@ export default {
   data() {
     return {
       isLoading: true,
+      // ovalHeight: '800px'
     }
   },
   mounted() {
@@ -17,24 +18,41 @@ export default {
       this.isLoading = false;
     }, 2100);
   },
+
 }
 </script>
 
 <template>
-  <transition>
+  <transition name="loader">
     <div v-if="isLoading" class="loader">
-      <img width="300" ref="gif" src="/img/logo.gif" alt="logo gif">
+      <img width="260" ref="gif" src="/img/logo.gif" alt="logo gif">
     </div>
+  </transition>
+  <transition name="oval">
+    <div v-if="isLoading" class="oval"></div>
   </transition>
 </template>
 
 <style>
-.v-leave-active {
+.loader-leave-active {
   transition: transform .5s cubic-bezier(0.9, 0, 1, 1);
 }
 
-.v-leave-to {
+.loader-leave-to {
   transform: translateY(-100%);
+}
+
+.oval-enter-active,
+.oval-leave-active {
+  transition: transform .5s cubic-bezier(0.9, 0, 1, 1);
+}
+
+.oval-enter-from {
+  transform: translate(-5%, 0) scaleY(1);
+}
+
+.oval-leave-to {
+  transform: translate(-5%, -100vh) scaleY(0);
 }
 
 .loader {
@@ -45,5 +63,19 @@ export default {
   justify-content: center;
   align-items: center;
   z-index: 900;
+}
+
+.oval {
+  position: fixed;
+  bottom: -400px;
+  width: 110%;
+  height: 800px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 990;
+  background-color: var(--bake-scroll);
+  box-shadow: 0px 200px 100px -50px rgba(92, 92, 92, 0.156);
 }
 </style>
