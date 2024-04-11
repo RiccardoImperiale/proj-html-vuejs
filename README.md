@@ -1,3 +1,5 @@
+![Alt Text](./src/assets/pastry.gif)
+
 # Consegna
 Riprodurre il layout assegnato solo in versione desktop.
 Tecnologie da utilizzare
